@@ -1,6 +1,6 @@
 <template>
   <div class="row col-12 bg-grey-2" style="height: 100vh">
-    <div class="col-4 q-pa-md">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 q-pa-md">
       <q-card class="my-card">
         <q-card-section>
           <div class="text-h6 text-center">Add Clasification</div>
@@ -19,7 +19,7 @@
         </q-card-actions>
       </q-card>
     </div>
-    <div class="col-8 q-pa-md">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 q-pa-md">
       <q-table
         title="Clasifications"
         :data="data"
@@ -31,13 +31,14 @@
         <template v-slot:top>
           <div class="row col-12 justify-end">
             <q-btn
+            class="q-ma-sm"
               color="primary"
               label="Edit Clasification"
               @click="openModal()"
               :disable="selected.length <= 0"
             />
             <q-btn
-              class="q-ml-sm"
+              class="q-ma-sm"
               color="primary"
               label="Delete Clasification"
               @click="deleteClasification()"
